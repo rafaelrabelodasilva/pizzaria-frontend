@@ -41,3 +41,5 @@ npm install cookies-next
 Biblioteca de ícones 
 
 npm install lucide-react
+
+# Um componente não precisa de "export default" somente quando é uma página é preciso adicionar o "export default" segundo a documentação do nextjs
