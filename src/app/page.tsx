@@ -64,6 +64,7 @@ export default function Page(){
               name="email"
               placeholder="Digite seu email"
               className={styles.input}
+              value="r@outlook.com"
             />
 
             <input 
@@ -72,6 +73,7 @@ export default function Page(){
               name="password"
               placeholder="Digite sua senha"
               className={styles.input}
+              value="123456"
             />
 
             <button type="submit" className={styles.button}>
