@@ -36,3 +36,8 @@ npm install axios
 Deixa pegar o cookie no client side (arquivo cookieClient.ts)
 
 npm install cookies-next
+
+## Lucide react
+Biblioteca de ícones 
+
+npm install lucide-react

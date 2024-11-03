@@ -35,7 +35,6 @@ export default function Signup(){
   }
 
   return(
-    <>
       <div className={styles.containerCenter}>
         <Image
           src={logoImg}
@@ -81,6 +80,5 @@ export default function Signup(){
         </section>
 
       </div> 
-    </>
   )
 }
