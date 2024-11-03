@@ -43,3 +43,10 @@ Biblioteca de ícones
 npm install lucide-react
 
 # Um componente não precisa de "export default" somente quando é uma página é preciso adicionar o "export default" segundo a documentação do nextjs
+
+## ✘ node v20.18.0 is not yet supported in the Community edition of Console Ninja.
+
+Esse erro está ocorrendo porque você está usando o Node.js na versão 20.18.0, que aparentemente não é suportada pelo Console Ninja na edição Community.
+
+Para resolver isso, instalar v18.17.0 is required
+https://nodejs.org/pt/blog/release/v18.17.0
