@@ -1,6 +1,7 @@
 import './globals.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Toaster } from 'sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Toaster 
+          position='bottom-right'
+          toastOptions={{
+            style: {
+              backgroundColor: '#f1f1f1',
+              color: '#131313',
+              borderColor: 'rbga(255,255,255, 0.5)'
+            }
+          }}
+        />
+        {children}
+      </body>
     </html>
   )
 }

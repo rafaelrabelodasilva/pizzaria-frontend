@@ -8,6 +8,7 @@ import Image from 'next/image'
 import logoImg from '../../../../../public/logo.svg'
 import { LogOutIcon } from 'lucide-react'
 import { deleteCookie } from 'cookies-next'
+import { toast } from 'sonner'
 
 export function Header(){
 
@@ -15,7 +16,7 @@ export function Header(){
 
   async function handleLogout(){
     deleteCookie('session', { path: '/'} )
-
+    toast.success('Logout realizado com sucesso')
     router.replace('/')
   }
 

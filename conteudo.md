@@ -50,3 +50,11 @@ Esse erro está ocorrendo porque você está usando o Node.js na versão 20.18.0
 
 Para resolver isso, instalar v18.17.0 is required
 https://nodejs.org/pt/blog/release/v18.17.0
+
+## Sonner
+
+Toast component para o react. Só é possível utilizar dentro de funções do tipo client. Não é possível utilizar em funções do tipo server-side
+
+npm install sonner
+
+\src\app\layout.tsx

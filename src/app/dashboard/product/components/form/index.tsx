@@ -8,6 +8,8 @@ import Image from 'next/image'
 import { Button } from '@/app/dashboard/components/button'
 import { getCookieClient } from '@/lib/cookieClient'
 import { api } from '@/services/app'
+import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
 
 interface CategoryProps{
   id: string;
@@ -19,6 +21,7 @@ interface Props {
 }
 
 export function Form({ categories }: Props){
+  const router = useRouter()
   const [image, setImage] = useState<File>()
   const [previewImage, setPreviewImage] = useState("")
 
@@ -29,6 +32,7 @@ export function Form({ categories }: Props){
     const description = formData.get('description')
 
     if(!name || !categoryIndex || !price || !description || !image){
+      toast.warning('Preencha todos os campos')
       return
     }
 
@@ -48,11 +52,12 @@ export function Form({ categories }: Props){
       }
     }).catch((error) => {
       console.log(error)
+      toast.warning('Falha ao realizar o cadastro')
       return
     })
 
-    console.log('Cadastro efetuado com sucesso!');
-    
+    toast.success('Cadastro efetuado com sucesso!');
+    router.push('/dashboard')
   }
 
   function handleFile(e: ChangeEvent<HTMLInputElement>){
@@ -60,7 +65,7 @@ export function Form({ categories }: Props){
       const image = e.target.files[0];
 
       if(image.type !== "image/jpeg" && image.type !== "image/png"){
-        console.log("FORMATO PROIBIDO!!!")
+        toast.warning('Formato de imagem não permitido')
         return;
       }
 

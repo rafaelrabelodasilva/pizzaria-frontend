@@ -4,6 +4,7 @@ import styles from '../page.module.scss'
 import logoImg from '/public/logo.svg'
 import { redirect } from 'next/navigation'
 import { api } from "@/services/app"
+import { toast } from "sonner"
 
 export default function Signup(){
 
@@ -15,7 +16,7 @@ export default function Signup(){
     const password = formData.get("password")
 
     if( name === "" || email === "" || password === ""){
-      console.log("PREENCHA TODOS OS CAMPOS")
+      toast.warning('Preencha todos os campos')
       return;
     }
 
@@ -25,7 +26,6 @@ export default function Signup(){
         email,
         password
       })
-
     }catch(err){
       console.log("error")
       console.log(err)
