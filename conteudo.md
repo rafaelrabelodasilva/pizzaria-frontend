@@ -58,3 +58,7 @@ Toast component para o react. Só é possível utilizar dentro de funções do t
 npm install sonner
 
 \src\app\layout.tsx
+
+
+--
+Por padrão a página (page.tsx) é server component
