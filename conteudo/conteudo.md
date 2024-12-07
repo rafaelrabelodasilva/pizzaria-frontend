@@ -63,3 +63,8 @@ npm install sonner
 --
 Por padrão a página (page.tsx) é server-side
 Se utilizado o "use-client" é considerado client-side
+
+
+## Provider
+
+![alt text](exemplo-provider.png)

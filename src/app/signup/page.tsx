@@ -74,7 +74,7 @@ export default function Signup(){
           </form>
 
           <Link href="/" className={styles.text}>
-            Já possui uma conta? Faça o ligin
+            Já possui uma conta? Faça o login
           </Link>
 
         </section>
