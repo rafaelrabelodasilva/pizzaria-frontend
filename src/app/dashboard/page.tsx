@@ -2,12 +2,14 @@ import { Orders } from "./components/orders";
 
 import { getCookieServer } from '@/lib/cookieServer'
 import { OrderProps } from '@/lib/order.type'
-import { api } from "@/services/app";
+import { api } from "@/services/api";
 
 //Irá retornar um array como o OrderProps ou vai retornar um array vazio
 async function getOrders(): Promise<OrderProps[] | []>{
   try{
-    const token = getCookieServer();
+    const token = await getCookieServer();
+
+    console.log(token)
 
     const response = await api.get("/orders", {
       headers: {

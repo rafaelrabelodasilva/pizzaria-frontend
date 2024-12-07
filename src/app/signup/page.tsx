@@ -3,7 +3,7 @@ import Link from "next/link"
 import styles from '../page.module.scss'
 import logoImg from '/public/logo.svg'
 import { redirect } from 'next/navigation'
-import { api } from "@/services/app"
+import { api } from "@/services/api"
 import { toast } from "sonner"
 
 export default function Signup(){

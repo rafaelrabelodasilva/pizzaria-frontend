@@ -1,4 +1,4 @@
-import { api } from '@/services/app'
+import { api } from '@/services/api'
 import { Button } from '../components/button'
 import styles from './styles.module.scss'
 import { getCookieServer } from '@/lib/cookieServer'

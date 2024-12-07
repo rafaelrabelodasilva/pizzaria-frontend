@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
-import { api } from '@/services/app'
+import { api } from '@/services/api'
 
 export default function Page(){
 
@@ -64,7 +64,6 @@ export default function Page(){
               name="email"
               placeholder="Digite seu email"
               className={styles.input}
-              value="r@outlook.com"
             />
 
             <input 
@@ -73,7 +72,6 @@ export default function Page(){
               name="password"
               placeholder="Digite sua senha"
               className={styles.input}
-              value="123456"
             />
 
             <button type="submit" className={styles.button}>

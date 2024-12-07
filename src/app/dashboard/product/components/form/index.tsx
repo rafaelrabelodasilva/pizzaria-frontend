@@ -7,7 +7,7 @@ import { UploadCloud } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '@/app/dashboard/components/button'
 import { getCookieClient } from '@/lib/cookieClient'
-import { api } from '@/services/app'
+import { api } from '@/services/api'
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
 
