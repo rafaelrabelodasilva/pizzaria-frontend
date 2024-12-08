@@ -68,3 +68,22 @@ Se utilizado o "use-client" é considerado client-side
 ## Provider
 
 ![alt text](exemplo-provider.png)
+
+
+# Deploy do front
+
+Foi feito pelo vercel
+
+Removido a URL chumbada no código do arquivo /services/api.ts e utilizado uma variável no lugar dela informada no arquivo .env:
+
+```api.ts
+import axios from "axios";
+
+export const api = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API
+})
+```
+
+```.env
+NEXT_PUBLIC_API=http://localhost:3333
+```
