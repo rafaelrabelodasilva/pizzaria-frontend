@@ -87,3 +87,8 @@ export const api = axios.create({
 ```.env
 NEXT_PUBLIC_API=http://localhost:3333
 ```
+
+Criado projeto na vercel e feito deploy:
+![alt text](image.png)
+
+![alt text](image-1.png)
